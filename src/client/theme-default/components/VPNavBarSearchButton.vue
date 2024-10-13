@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { ButtonTranslations } from '../../../../types/local-search'
 import { createSearchTranslate } from '../support/translation'
-import SoundFiles from '../sounds/button.mp3'
 
 // Button-Translations
 const defaultTranslations: { button: ButtonTranslations } = {
@@ -12,11 +11,6 @@ const defaultTranslations: { button: ButtonTranslations } = {
 }
 
 const translate = createSearchTranslate(defaultTranslations)
-
-const playSound = () => {
-  const audio = new Audio(SoundFiles);
-  audio.play();
-}
 </script>
 
 <template>

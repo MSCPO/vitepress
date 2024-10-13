@@ -12,16 +12,10 @@ const defaultTranslations: { button: ButtonTranslations } = {
 }
 
 const translate = createSearchTranslate(defaultTranslations)
-</script>
 
-<script lang="ts">
-export default {
-  methods: {
-      playSound() {
-        const audio = new Audio(SoundFiles);
-        audio.play();
-      }
-    }
+const playSound = () => {
+  const audio = new Audio(SoundFiles);
+  audio.play();
 }
 </script>
 

@@ -128,16 +128,10 @@ if (__VP_LOCAL_SEARCH__) {
 }
 
 const provider = __ALGOLIA__ ? 'algolia' : __VP_LOCAL_SEARCH__ ? 'local' : ''
-</script>
 
-<script lang="ts">
-export default {
-  methods: {
-      playSound() {
-        const audio = new Audio(SoundFiles);
-        audio.play();
-      }
-    }
+const playSound = () => {
+  const audio = new Audio(SoundFiles);
+  audio.play();
 }
 </script>
 

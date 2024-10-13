@@ -61,16 +61,10 @@ function scrollToTop() {
   open.value = false
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
 }
-</script>
 
-<script lang="ts">
-export default {
-  methods: {
-      playSound() {
-        const audio = new Audio(SoundFiles);
-        audio.play();
-      }
-    }
+const playSound = () => {
+  const audio = new Audio(SoundFiles);
+  audio.play();
 }
 </script>
 

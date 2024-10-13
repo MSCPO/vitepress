@@ -24,7 +24,8 @@ on:
     tags-ignore:
       - '*'
 
-permissions: {}
+permissions:
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number }}
@@ -44,4 +45,10 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - run: npx pkg-pr-new publish --compact --no-template --pnpm
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated Build
+          branch: artifact
+          file_pattern: 'bin/ dist/ types/ template/ lib/ client.d.ts theme.d.ts theme-without-fonts.d.ts'
+          commit_user_name: Automated Build Bot # defaults to "github-actions[bot]"
+          commit_author: Automated Build Bot <actions@github.com>

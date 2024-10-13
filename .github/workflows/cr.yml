@@ -5,7 +5,7 @@ env:
 
 on:
   pull_request:
-    branches: [main]
+    branches: [mscpo]
     types: [opened, synchronize, labeled, ready_for_review]
     paths-ignore:
       - '.github/**'
@@ -14,7 +14,7 @@ on:
       - 'docs/**'
       - '*.md'
   push:
-    branches: [main]
+    branches: [mscpo]
     paths-ignore:
       - '.github/**'
       - '__tests__/**'

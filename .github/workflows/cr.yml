@@ -51,3 +51,4 @@ jobs:
           commit_user_name: Automated Build Bot # defaults to "github-actions[bot]"
           commit_author: Automated Build Bot <actions@github.com>
           create_branch: true
+          push_options: '--force'

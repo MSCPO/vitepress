@@ -16,7 +16,6 @@ on:
   push:
     branches: [mscpo]
     paths-ignore:
-      - '.github/**'
       - '__tests__/**'
       - 'art/**'
       - 'docs/**'

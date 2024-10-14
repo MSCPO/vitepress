@@ -1,5 +1,5 @@
 {
-  "name": "vitepress",
+  "name": "@mscpo/vitepress",
   "version": "1.4.1",
   "description": "Vite & Vue powered static site generator",
   "keywords": [

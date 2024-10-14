@@ -23,8 +23,7 @@ on:
     tags-ignore:
       - '*'
 
-permissions:
-  contents: write
+permissions: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number }}
@@ -43,7 +42,6 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - uses: simenandre/publish-with-pnpm@v2
+      - uses: publish-with-pnpm
         with:
-          npm-auth-token: ${{ secrets.NPM_TOKEN }}
-
+          token: ${{ secrets.NPM_TOKEN }}

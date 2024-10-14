@@ -43,12 +43,8 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Automated Build
-          branch: artifact
-          file_pattern: 'bin/ dist/ types/ template/ lib/ client.d.ts theme.d.ts theme-without-fonts.d.ts'
-          commit_user_name: Automated Build Bot # defaults to "github-actions[bot]"
-          commit_author: Automated Build Bot <actions@github.com>
-          create_branch: true
-          push_options: '--force'
+      - run: pnpm publish
+        env:
+	        # 读取github的secrets变量，这里的NPM_TOKEN是前面设置的变量名
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+

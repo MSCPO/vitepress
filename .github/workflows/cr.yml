@@ -2,7 +2,6 @@ name: CR
 
 env:
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 on:
   pull_request:
@@ -44,4 +43,7 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - run: pnpm publish
+      - uses: simenandre/publish-with-pnpm@v2
+        with:
+          npm-auth-token: ${{ secrets.NPM_TOKEN }}
+

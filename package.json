@@ -7,6 +7,9 @@
     "vue",
     "vitepress"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://vitepress.dev/",
   "bugs": {
     "url": "https://github.com/vuejs/vitepress/issues"

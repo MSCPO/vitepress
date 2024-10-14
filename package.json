@@ -12,9 +12,9 @@
   },
   "homepage": "https://vitepress.dev/",
   "bugs": {
-    "url": "https://github.com/vuejs/vitepress/issues"
+    "url": "https://github.com/mscpo/vitepress/issues"
   },
-  "repository": "github:vuejs/vitepress",
+  "repository": "github:mscpo/vitepress",
   "license": "MIT",
   "author": "Evan You",
   "type": "module",

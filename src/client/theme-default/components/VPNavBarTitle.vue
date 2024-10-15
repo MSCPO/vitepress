@@ -28,16 +28,10 @@ const target = computed(() =>
     ? undefined
     : theme.value.logoLink?.target
 )
-</script>
 
-<script lang="ts">
-export default {
-  methods: {
-      playSound() {
-        const audio = new Audio(SoundFiles);
-        audio.play();
-      }
-    }
+const playSound = () => {
+  const audio = new Audio(SoundFiles);
+  audio.play();
 }
 </script>
 
